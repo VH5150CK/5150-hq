@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5150 HQ</title>
+<style>
+body{margin:0;background:#10131c;color:white;font-family:Arial,sans-serif;text-align:center;padding:35px 18px}
+h1{font-size:clamp(48px,10vw,90px);margin:30px 0 5px}
+p{color:#b8c1d3}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;max-width:900px;margin:40px auto}
+a{display:block;padding:30px 15px;background:#222a3c;border:1px solid #47516a;border-radius:18px;color:white;text-decoration:none;font-size:20px}
+a:hover{background:#34415b}
+.clock{font-size:28px;margin-top:25px}
+</style>
+</head>
+<body>
+<h1>5150 HQ</h1>
+<p>Your World. Your Rules.</p>
+<div class="clock" id="clock"></div>
+<div class="grid">
+<a href="https://www.icloud.com/">✍️ Writing Studio</a>
+<a href="https://www.manutd.com/">⚽ Manchester United</a>
+<a href="https://music.youtube.com/">🎸 Music</a>
+<a href="https://www.bbc.co.uk/news">📰 News</a>
+<a href="https://www.icloud.com/mail/">✉️ Email</a>
+<a href="https://www.google.com/">🔎 Research</a>
+</div>
+<script>
+function updateClock(){
+document.getElementById("clock").textContent=new Date().toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit"});
+}
+updateClock();
+setInterval(updateClock,1000);
+</script>
+</body>
+</html>
